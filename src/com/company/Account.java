@@ -4,19 +4,18 @@ public class Account {
     private int number;
     private int account;
     private String holder;
+
     private double initialDeposit;
     private double balance;
     private double depositValue;
     private double NovoDepositValue;
+    private double withdraw;
 
 
-    public void setNumber(int number){
-        this.number = number;
-    }
+
     public int getNumber(){
         return this.number;
     }
-
 
     public void setAccount(int account){
         this.account = account;
@@ -34,7 +33,7 @@ public class Account {
     }
 
 
-    public void setInitalDeposit(double initalDeposit){
+    public void setInitialDeposit(double initalDeposit){
         this.initialDeposit = initalDeposit;
     }
 
@@ -49,6 +48,8 @@ public class Account {
     public void setBalance(double balance){
         this.balance = balance;
     }
+
+
     public double getBalance(){
         return this.balance + this.initialDeposit + this.depositValue + NovoDepositValue;
     }
@@ -59,6 +60,16 @@ public class Account {
 
     public void setDepositValue(double depositValue) {
         this.depositValue = depositValue;
+    }
+
+
+
+    public void setWithdraw(double withdraw){
+        this.balance -= (withdraw + 5.00);
+    }
+
+    public double getWithdraw(){
+        return this.withdraw;
     }
 
     public String toString(){

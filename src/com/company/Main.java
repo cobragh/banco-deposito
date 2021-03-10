@@ -30,7 +30,7 @@ public class Main {
             System.out.print("Enter initial deposit value: ");
             double initialDeposit = sc.nextDouble();
             System.out.println("-----------------------------------");
-            acc.setInitalDeposit(initialDeposit);
+            acc.setInitialDeposit(initialDeposit);
         }
 
         System.out.println(acc);
@@ -79,6 +79,13 @@ public class Main {
                 }
             }
         }
+
+
+        System.out.print("Withdraw: ");
+        double withdraw = sc.nextDouble();
+        acc.setWithdraw(withdraw);
+
+        System.out.println(acc);
         sc.close();
     }
 }
